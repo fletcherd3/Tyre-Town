@@ -1,4 +1,11 @@
 <!-- This is your main page -->
+<?php
+require_once('./request/search_request.php');
+require_once('./request/search_request2.php');
+require_once('./request/search_request2.php');
+require_once('./request/search_request3.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -47,58 +54,7 @@
 
  </nav>
 
- <style>
 
-     .collapsible {
-         background-color: #eee;
-         color: #444;
-         cursor: pointer;
-         padding: 18px;
-         width: 100%;
-         border: none;
-         text-align: left;
-         outline: none;
-         font-size: 15px;
-         border-radius: 20px;
-     }
-
-     .active, .collapsible:hover {
-         background-color: #ccc;
-     }
-
-     /* Style the collapsible content.*/
-     .content {
-         padding: 0 18px;
-         background-color: #f1f1f1;
-         max-height: 0;
-         overflow: hidden;
-         transition: max-height 0.4s ease-out;
-         border-radius: 30px;
-
-     }
-     .collapsible:after {
-         content: '\02795'; /* Unicode character for "plus" sign (+) */
-         font-size: 30px;
-         color: white;
-         float: right;
-         margin-left: 5px;
-         border-radius: 20px;
-     }
-
-     .active:after {
-         content: "\2796"; /* Unicode character for "minus" sign (-) */
-
-     }
-
-     .footer{
-         width: 100%;
-         background-color: grey;
-         color: white;
-         text-align: center;
-
-     }
-
- </style>
 
    <!-- Page content -->
     <div class="container">
@@ -106,6 +62,7 @@
             <div class="col-lg-12 ">
                 <h2 class="mt-5 text-center">Tyre Town Invoice Search</h2>
             </div>
+
 
 
          <form method="post" action="index.php">
@@ -116,11 +73,10 @@
         <br/>
 
 
-        <?php
-        require_once('./request/search_request2.php');
-        ?>
 
         <?php
+
+
         if (!empty($_POST['input'])){
             if($row = mysqli_fetch_array($query))
             ?>
@@ -158,17 +114,9 @@
                 </table>
             </div>
             </div>
-        <?php } ?>
+        <?php } ?> # F.D - Is this good practise?
 
-        <?php
-        require_once('./request/search_request.php');
-        ?>
-        <?php
-        /*        require_once('./request/search_request2.php');
-                */?><!--
-        --><?php
-        /*        require_once('./request/search_request3.php');
-                */?>
+
 
         <?php
         if (empty($_POST['input'])){
@@ -220,9 +168,6 @@
         <?php } ?>
 
         <?php
-        require_once('./request/search_request3.php');
-        ?>
-        <?php
         if (!empty($_POST['input'])){
         if($row = mysqli_fetch_array($query))
             ?>
@@ -259,9 +204,6 @@
 
         <?php } ?>
 
-        <?php
-        require_once('./request/search_request4.php');
-        ?>
         <?php
         if (!empty($_POST['input'])){
         if($row = mysqli_fetch_array($query))
@@ -606,3 +548,4 @@
             </script>
             <script src="script/scripts.js"></script>
  </body>
+</html>
