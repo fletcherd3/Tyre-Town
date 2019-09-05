@@ -1,9 +1,10 @@
 <!-- This is your main page -->
 <?php
-require_once('./request/search_request.php');
-require_once('./request/search_request2.php');
-require_once('./request/search_request2.php');
-require_once('./request/search_request3.php');
+//require_once('./request/search_request.php');
+//require_once('./request/search_request2.php');
+//require_once('./request/search_request2.php');
+//require_once('./request/search_request3.php');
+//require_once('./request/search_request4.php');
 ?>
 
 <!DOCTYPE html>
@@ -16,10 +17,27 @@ require_once('./request/search_request3.php');
      <title>Tyre Town</title>
 
      <!-- Bootstrap core CSS -->
+
+     <!-- F.D - I dont think this is needed, but im keeping it just in case for now
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/bootstrap-grid.min.css">
      <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+     -->
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
      <link rel="stylesheet" href="css/style.css">
+
+     <!-- This is the javascript needed for some bootstrap components -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+             crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+             crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+             crossorigin="anonymous"></script>
 
      <!-- error handling function -->
      <script>  //error handling function + test in line 10
@@ -66,16 +84,16 @@ require_once('./request/search_request3.php');
 
 
          <form method="post" action="index.php">
-                <div class="float-mid"><input type="text" name="input" size="25" id="receiptID" placeholder="Enter Invoice Number">
-                    <input type="submit" name="submitButton" value="Submit"></div></form>
-
+                <div class="float-mid test"><input type="text" name="input" size="25" id="receiptID"
+                                              placeholder="Enter Invoice Number" required pattern="\S+"/>
+                    <input class="button" type="submit" name="submitButton" value="Submit" ></div></form>
 
         <br/>
 
 
 
         <?php
-
+        require_once('./request/search_request2.php');
 
         if (!empty($_POST['input'])){
             if($row = mysqli_fetch_array($query))
@@ -114,11 +132,12 @@ require_once('./request/search_request3.php');
                 </table>
             </div>
             </div>
-        <?php } ?> # F.D - Is this good practise?
+        <?php } ?> <!-- F.D - Is this good practise? -->
 
 
 
         <?php
+        require_once('./request/search_request.php');
         if (empty($_POST['input'])){
         }
         else{if($row = mysqli_fetch_array($query))
@@ -168,6 +187,7 @@ require_once('./request/search_request3.php');
         <?php } ?>
 
         <?php
+        require_once('./request/search_request3.php');
         if (!empty($_POST['input'])){
         if($row = mysqli_fetch_array($query))
             ?>
@@ -205,6 +225,7 @@ require_once('./request/search_request3.php');
         <?php } ?>
 
         <?php
+        require_once('./request/search_request4.php');
         if (!empty($_POST['input'])){
         if($row = mysqli_fetch_array($query))
         ?>
