@@ -1,11 +1,4 @@
 <!-- This is your main page -->
-<?php
-//require_once('./request/search_request.php');
-//require_once('./request/search_request2.php');
-//require_once('./request/search_request2.php');
-//require_once('./request/search_request3.php');
-//require_once('./request/search_request4.php');
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -84,7 +77,7 @@
 
 
          <form method="post" action="index.php">
-                <div class="float-mid test"><input type="text" name="input" size="25" id="receiptID"
+                <div class="float-mid search"><input type="text" name="input" size="25" id="receiptID"
                                               placeholder="Enter Invoice Number" required pattern="\S+"/>
                     <input class="button" type="submit" name="submitButton" value="Submit" ></div></form>
 
@@ -94,6 +87,7 @@
 
         <?php
         require_once('./request/search_request2.php');
+        // echo($_POST['input']); Testing user input to make sure is a valid option
 
         if (!empty($_POST['input'])){
             if($row = mysqli_fetch_array($query))
