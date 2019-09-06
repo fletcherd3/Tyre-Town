@@ -16,6 +16,7 @@ header{
     padding-bottom: 40px;
     font-size: larger;
     text-decoration: underline darkgrey;
+    background-color: #eee;
 }
 
 /* Responsive table */
@@ -193,7 +194,6 @@ table tr {
 
 }
 
-
  .collapsible {
      background-color: #eee;
      color: #444;
@@ -243,3 +243,20 @@ table tr {
 
 }
 
+
+.navbar{
+    border-radius: 25px;
+
+}
+input[type="text"],
+.search{
+    border-radius: 18px;
+    padding: 2px;
+    padding-left: 10px;
+}
+
+.button{
+    border-radius: 19px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
