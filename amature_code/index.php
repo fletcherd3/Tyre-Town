@@ -21,6 +21,8 @@
            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
      <link rel="stylesheet" href="css/style.css">
 
+     <script type="text/javascript" src="./scripts/scripts.js"></script>
+
      <!-- This is the javascript needed for some bootstrap components -->
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
              integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -33,18 +35,12 @@
              crossorigin="anonymous"></script>
 
      <!-- error handling function -->
-     <script>  //error handling function + test in line 10
-         onerror = errorHandler;
-         function errorHandler(message, link, line) {
-             message = "Error Encountered:\n\n";
-             message += "URL: " + link + "\n";
-             message += "Line: " + line + "\n";
-             alert(message);
-             return true;
-         }
+     <script>  //error handling function + test in line 10 hmmmmmmm CHECK THIS LATER PLEEEASEE
+         error_handller();
      </script>
  </head>
  <body>
+
 
  <!-- Navigation -->
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -58,6 +54,9 @@
          <ul class="navbar-nav Tyre-Town">
              <li class="nav-item">
                  <a class="nav-link col-lg-1" href="./index.php">Home</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link col-lg-1" href="./index.php">About Us</a>
              </li>
          </ul>
      </div>
@@ -81,7 +80,7 @@
                                               placeholder="Enter Invoice Number" required pattern="\S+"/>
                     <input class="button" type="submit" name="submitButton" value="Submit" ></div></form>
 
-        <br/>
+        <br>
 
 
 
@@ -122,7 +121,6 @@
                             <td data-label="Odometer Reading"><?php echo $row['ODOMETER READING'];?></td>
 
                         </tr>
-                        <?php /*} */?>
                 </table>
             </div>
             </div>
@@ -137,7 +135,7 @@
         else{if($row = mysqli_fetch_array($query))
             ?>
 
-            <br/>
+            <br>
 
 
 
@@ -186,7 +184,7 @@
         if($row = mysqli_fetch_array($query))
             ?>
 
-            <br/>
+            <br>
 
             <button class="collapsible"><h3>Garage Information</h3></button>
             <div class="content">
@@ -224,7 +222,7 @@
         if($row = mysqli_fetch_array($query))
         ?>
 
-        <br/>
+        <br>
 
         <button class="collapsible"><h3>Alignment Information</h3></button>
         <div class="content">
@@ -526,41 +524,15 @@
 
         <?php } ?>
 
-                <br/>
-                <br/>
+                <br>
+                <br>
 
                 <div class="footer fixed-bottom">TyreTown 2018, Dev Group D</div>
-
+    <!-- JavaScript function must be bellow the last collapsible box -->
     <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        for (i= 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        }
+        make_collapsible();
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                    crossorigin="anonymous">
-            </script>
-            <script
-                    src="https://code.jquery.com/jquery-3.3.1.min.js"
-                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-                    crossorigin="anonymous">
-            </script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                    crossorigin="anonymous">
-            </script>
-            <script src="script/scripts.js"></script>
+
  </body>
 </html>
