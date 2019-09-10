@@ -45,18 +45,21 @@
  <!-- Navigation -->
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
      <div class="container col-lg-11">
-         <a class="navbar-brand" href="./index.php">Tyre Town</a>
+         <a class="navbar-brand" href="./index.php">
+		 <img src="assets/logo.png" width="37" height="30" class="d-inline-block align-top" alt="">
+		 Tyre Town
+		 </a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
          </button>
      </div>
      <div class="collapse navbar-collapse" id="navbarResponsive">
-         <ul class="navbar-nav Tyre-Town">
+         <ul class="navbar-nav">
              <li class="nav-item">
-                 <a class="nav-link col-lg-1" href="./index.php">Home</a>
+                 <a class="nav-link" href="./index.php">Home</a>
              </li>
              <li class="nav-item">
-                 <a class="nav-link col-lg-1" href="./index.php">About Us</a>
+                 <a class="nav-link" href="./index.php">About Us</a>
              </li>
          </ul>
      </div>
