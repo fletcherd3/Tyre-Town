@@ -243,10 +243,9 @@ table tr {
 
 }
 
-
-.navbar{
-    border-radius: 25px;
-
+.navbar {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 input[type="text"],
 .search{
