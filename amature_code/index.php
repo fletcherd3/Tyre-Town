@@ -38,10 +38,16 @@
      <script>  //error handling function + test in line 10 hmmmmmmm CHECK THIS LATER PLEEEASEE
          error_handller();
      </script>
+
+	 <!-- Get Target values from database and store values in an array -->
+	 <?php
+	 require_once('./request/request_targets.php');
+	 if($targets = mysqli_fetch_array($query))
+	 ?>
  </head>
  <body>
 
-
+ 
  <!-- Navigation -->
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
      <div class="container col-lg-11">
@@ -219,6 +225,38 @@
 
         <?php } ?>
 
+		<?php
+		function check_target($value_str, $target_str) {
+			// Given the value and the target from the database and cleans then checks if the value is within the threshold and return the value in
+			// green if True or red if False.
+
+			if ($value_str == null || $target_str == null){
+				return "-";
+			}
+
+			$value_int = str_replace(array("'",'m'), '',$value_str);
+
+			$target_str = str_replace("°", '.',$target_str);
+			$target_str = str_replace(array("'",'m'), '',$target_str);
+			$target_ints = explode(" +/-", $target_str);
+
+
+			$target_value = $target_ints[0];
+			$target_error = 0;
+			if (isset($target_ints[1])) {
+				$target_error = $target_ints[1];
+			}
+
+			if (($target_value - $target_error) < $value_int && $value_int < ($target_value + $target_error)) {
+				$colour = 'green';
+			} else {
+				$colour = 'red';
+			}
+
+			return sprintf('<span style="color:%s;">', $colour) .  $value_int .  "</span>";
+		}
+		?>
+
         <?php
         require_once('./request/search_request4.php');
         if (!empty($_POST['input'])){
@@ -243,23 +281,23 @@
                     <tr class="alignment-graph">
                         <td data-label="Camber" class="table-no-underline background noPad">&nbsp;</td>
                         <td class="table-column-head orientations">Left</td>
-                        <td data-label="Before"><?php echo $row['1'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['1'], $targets['2']); ?></td>
                         <td data-label="Target" class="table-no-underline target">-0°40'   +/-0°30'</td>
-                        <td data-label="Actual"><?php echo $row['2'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['2'], $targets['2']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head">Right</td>
-                        <td data-label="Before"><?php echo $row['3'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['3'], $targets['2']);?></td>
                         <td class="noShow target"></td>
-                        <td data-label="Actual"><?php echo $row['4'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['4'], $targets['2']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head">Cross</td>
-                        <td data-label="Before"><?php echo $row['5'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['5'], $targets['3']);?></td>
                         <td data-label="Target" class="target">0°00' +/-0°30'</td>
-                        <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['6'];?></td>
+                        <td class="underPadding bottomTD" data-label="Actual"><?php echo check_target($row['6'], $targets['3']);?></td>
                     </tr>
                     </tbody>
                 </table>
@@ -276,23 +314,23 @@
                     <tr class="alignment-graph">
                         <td data-label="Toe"class="table-no-underline background">&nbsp;</td>
                         <td class="table-column-head orientations">Left</td>
-                        <td data-label="Before"><?php echo $row['7'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['7'], $targets['4']);?></td>
                         <td data-label="Target" class="table-no-underline target">1.5mm +/-1.00</td>
-                        <td data-label="Actual"><?php echo $row['8'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['8'], $targets['4']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Right</td>
-                        <td data-label="Before"><?php echo $row['9'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['9'], $targets['4']);?></td>
                         <td class="noShow target"></td>
-                        <td data-label="Actual"><?php echo $row['10'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['10'], $targets['4']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Total</td>
-                        <td data-label="Before"><?php echo $row['11'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['11'], $targets['5']);?></td>
                         <td data-label="Target" class="target">3mm +/-2.0mm</td>
-                        <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['12'];?></td>
+                        <td class="underPadding bottomTD" data-label="Actual"><?php echo check_target($row['12'], $targets['5']);?></td>
                     </tr>
                     </tbody>
                 </table>
@@ -308,9 +346,9 @@
                     <tr class="alignment-graph">
                         <td data-label="Geometrical Driving Axis" class="table-no-underline noRightBorder background">&nbsp;</td>
                         <td class="table-column-head noRightBorder maxwidth-empty-second orientations noShow">&nbsp;</td>
-                        <td data-label="Before"><?php echo $row['13'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['13'], $targets['6']);?></td>
                         <td data-label="Target" class="target">0°00'</td>
-                        <td data-label="Actual"><?php echo $row['14'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['14'], $targets['6']);?></td>
                     </tbody>
                 </table>
                 <header>Front Axle</header>
@@ -326,23 +364,23 @@
                     <tr class="alignment-graph">
                         <td data-label="Camber" class="table-no-underline background">&nbsp;</td>
                         <td class="table-column-head orientations">Left</td>
-                        <td data-label="Before"><?php echo $row['15'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['15'], $targets['7']);?></td>
                         <td data-label="Target" class="table-no-underline target">0°00' +/-0°30'</td>
-                        <td data-label="Actual"><?php echo $row['16'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['16'], $targets['7']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Right</td>
-                        <td data-label="Before"><?php echo $row['17'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['17'], $targets['7']);?></td>
                         <td class="noShow target"></td>
-                        <td data-label="Actual"><?php echo $row['18'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['18'], $targets['7']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Cross</td>
-                        <td data-label="Before"><?php echo $row['19'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['19'], $targets['8']);?></td>
                         <td data-label="Target" class="target">0°00' +/-0°30'</td>
-                        <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['20'];?></td>
+                        <td class="underPadding bottomTD" data-label="Actual"><?php echo check_target($row['20'], $targets['8']);?></td>
                     </tr>
                     </tbody>
                 </table>
@@ -358,23 +396,23 @@
                     <tr class="alignment-graph">
                         <td data-label="Caster" class="table-no-underline background">&nbsp;</td>
                         <td class="table-column-head orientations">Left</td>
-                        <td data-label="Before"><?php echo $row['21'];?></td>
-                        <td data-label="Target" class="table-no-underline target">2°35' +/-0°30'</td>
-                        <td data-label="Actual"><?php echo $row['22'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['21'], $targets['9']);?></td>
+                        <td data-label="Target" class="table-no-underline target">-2°35' +/-0°30'</td>
+                        <td data-label="Actual"><?php echo check_target($row['22'], $targets['9']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Right</td>
-                        <td data-label="Before"><?php echo $row['23'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['23'], $targets['9']);?></td>
                         <td class="noShow target"></td>
-                        <td data-label="Actual"><?php echo $row['24'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['24'], $targets['9']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Cross</td>
-                        <td data-label="Before"><?php echo $row['25'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['25'], $targets['10']);?></td>
                         <td data-label="Target" class="target">0°00' +/-0°30'</td>
-                        <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['26'];?></td>
+                        <td class="underPadding bottomTD" data-label="Actual"><?php echo check_target($row['26'], $targets['10']);?></td>
                     </tr>
                     </tbody>
                 </table>
@@ -390,23 +428,23 @@
                     <tr class="alignment-graph">
                         <td data-label="SAI" class="table-no-underline background">&nbsp;</td>
                         <td class="table-column-head orientations">Left</td>
-                        <td data-label="Before"><?php echo $row['27'];?></td>
-                        <td data-label="Target" class="table-no-underline target">12°40' +/-0°45</td>
-                        <td data-label="Actual"><?php echo $row['28'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['27'], $targets['11']);?></td>
+                        <td data-label="Target" class="table-no-underline target">-12°40' +/-0°45</td>
+                        <td data-label="Actual"><?php echo check_target($row['28'], $targets['11']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Right</td>
-                        <td data-label="Before"><?php echo $row['29'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['29'], $targets['11']);?></td>
                         <td class="noShow target"></td>
-                        <td data-label="Actual"><?php echo $row['30'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['30'], $targets['11']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Cross</td>
-                        <td data-label="Before"><?php echo $row['31'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['31'], $targets['12']);?></td>
                         <td data-label="Target" class="target">0°00'</td>
-                        <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['32'];?></td>
+                        <td class="underPadding bottomTD" data-label="Actual"><?php echo check_target($row['31'], $targets['12']);?></td>
                     </tr>
                     </tbody>
                 </table>
@@ -422,16 +460,16 @@
                     <tr class="alignment-graph">
                         <td data-label="Track Differential Angle" class="table-no-underline background">&nbsp;</td>
                         <td class="table-column-head orientations">Left</td>
-                        <td data-label="Before"><?php echo $row['33'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['33'], $targets['13']);?></td>
                         <td class="table-no-underline noShow target"></td>
-                        <td data-label="Actual"><?php echo $row['34'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['34'], $targets['13']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Right</td>
-                        <td data-label="Before"><?php echo $row['35'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['35'], $targets['13']);?></td>
                         <td class="noShow target"></td>
-                        <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['36'];?></td>
+                        <td class="underPadding bottomTD" data-label="Actual"><?php echo check_target($row['36'], $targets['13']);?></td>
                     </tr>
                     </tbody>
                 </table>
@@ -447,30 +485,30 @@
                     <tr class="alignment-graph">
                         <td data-label="Toe" class="table-no-underline background">&nbsp;</td>
                         <td class="table-column-head orientations">Left</td>
-                        <td data-label="Before"><?php echo $row['37'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['37'], $targets['14']);?></td>
                         <td data-label="Target" class="table-no-underline target">0.5mm +/-1.0mm</td>
-                        <td data-label="Actual"><?php echo $row['38'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['38'], $targets['14']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Right</td>
-                        <td data-label="Before"><?php echo $row['39'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['39'], $targets['14']);?></td>
                         <td class="noShow target"></td>
-                        <td data-label="Actual"><?php echo $row['40'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['40'], $targets['14']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Cross</td>
-                        <td data-label="Before"><?php echo $row['41'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['41'], $targets['15']);?></td>
                         <td data-label="Target">1mm +/-2.0mm</td>
-                        <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['42'];?></td>
+                        <td class="underPadding bottomTD" data-label="Actual"><?php echo check_target($row['42'], $targets['15']);?></td>
                     </tr>
                     </tbody>
                 </table>
                 <table class="alignment">
                     <thead>
                     <th class="maxwidth-title">Setback</th>
-                    <th>&nbsp;</th>
+                    <th>&nbsp;</th> 
                     <th>Before</th>
                     <th>Target</th>
                     <th>Actual</th>
@@ -479,9 +517,9 @@
                     <tr class="alignment-graph">
                         <td data-label="Setback" class="table-no-underline noRightBorder background">&nbsp;</td>
                         <td class="table-column-head noRightBorder maxwidth-empty-second noShow orientations">&nbsp;</td>
-                        <td data-label="Before"><?php echo $row['43'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['43'], $targets['16']);?></td>
                         <td data-label="Target" class="target">0°00'</td>
-                        <td  class="underPadding bottomTD" data-label="Actual"><?php echo $row['44'];?></td>
+                        <td  class="underPadding bottomTD" data-label="Actual"><?php echo check_target($row['44'], $targets['16']);?></td>
                     </tbody>
                 </table>
                 <table class="alignment">
@@ -497,30 +535,36 @@
                         <td data-label="Max Steering Lock" class="table-no-underline background">Left Steer</td>
                         <!--<td data-label="Left Steer" class="bigNoShow"></td>-->
                         <td class="table-column-head orientations">Left</td>
-                        <td data-label="Before"><?php echo $row['45'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['45'], $targets['17']);?></td>
                         <td data-label="Target" class="table-no-underline target">-41°00' +/-1°30'</td>
-                        <td data-label="Actual"><?php echo $row['46'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['46'], $targets['17']);?></td>
                     </tr>
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Right</td>
-                        <td data-label="Before"><?php echo $row['47'];?></td>
-                        <td data-label="Target" class="target">33°00' +/-1°30'</td>
-                        <td data-label="Actual"><?php echo $row['48'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['47'], $targets['18']);?></td>
+                        <td data-label="Target" class="target">-33°00' +/-1°30'</td>
+                        <td data-label="Actual"><?php echo check_target($row['48'], $targets['18']);?></td>
                     </tr>
                     <tr class="alignment-graph">
                         <td class="table-no-underline background">Right Steer</td>
                         <td class="table-column-head orientations">Left</td>
-                        <td data-label="Before"><?php echo $row['49'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['49'], $targets['20']);?></td>
                         <td data-label="Target" class="table-no-underline target noShow">-41°00' +/-1°30'</td>
-                        <td data-label="Actual"><?php echo $row['50'];?></td>
+                        <td data-label="Actual"><?php echo check_target($row['50'], $targets['20']);?></td>
                     </tr>
+
+					<!-- Seems to be a mistake in the given database with the last two values in the 'targetvalue'
+						 database where the last two values don't match the given values and are the wrong way around,
+						 for now i'll swith them around the other way so they'll work properly.
+					 -->
+
                     <tr>
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Right</td>
-                        <td data-label="Before"><?php echo $row['51'];?></td>
-                        <td class="noShow target">33°00' +/-1°30'</td>
-                        <td class="underPadding bottomTD" data-label="Actual"><?php echo $row['52'];?></td>
+                        <td data-label="Before"><?php echo check_target($row['51'], $targets['19']);?></td>
+                        <td class="noShow target">-33°00' +/-1°30'</td>
+                        <td class="underPadding bottomTD" data-label="Actual"><?php echo check_target($row['52'], $targets['19']);?></td>
                     </tr>
                     </tbody>
                 </table>
@@ -531,6 +575,7 @@
                 <br>
 
                 <div class="footer fixed-bottom">TyreTown 2018, Dev Group D</div>
+
     <!-- JavaScript function must be bellow the last collapsible box -->
     <script>
         make_collapsible();
