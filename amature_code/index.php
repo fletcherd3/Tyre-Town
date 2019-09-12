@@ -253,7 +253,7 @@
 				$colour = 'red';
 			}
 
-			return sprintf('<span style="color:%s;">', $colour) .  $value_int .  "</span>";
+			return sprintf('<span style="color:%s;">', $colour) .  $value_str .  "</span>";
 		}
 		?>
 
