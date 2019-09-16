@@ -8,7 +8,7 @@
      <meta name="description" content="">
      <meta name="author" content="">
      <title>Tyre Town</title>
-	 <link rel="assets/shortcut icon" href="favicon.ico" type="image/x-icon">
+	 <link rel="assets/shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 
      <!-- Bootstrap core CSS -->
 
