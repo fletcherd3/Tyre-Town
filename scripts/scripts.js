@@ -1,7 +1,8 @@
 // Keep your scripts in here
 
-
 function error_handller() {
+    // Hadles the error handling  for the page and prints in a readable format.
+
     onerror = errorHandler;
     function errorHandler(message, link, line) {
         message = "Error Encountered:\n\n";
@@ -13,6 +14,8 @@ function error_handller() {
 }
 
 function make_collapsible() {
+    // Creates the collapsiable animations and functionallity
+
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -28,3 +31,7 @@ function make_collapsible() {
         });
     }
 }
+
+$(document).ready(function () {
+    $('.header').height($(window).height());
+})

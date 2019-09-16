@@ -78,15 +78,17 @@
  </nav>
 
     <div class="card">
-		<h1 align="center">Welcome to Tyre Town </h1>
-		<h3 align="center" > Tyretown has served Christchurch for more than 50 years.</h3>
-		    <h3 align="center" > This family-owned company specializes in providing quality products and services to its customers.</h3>
-		<br>
-		<h3 align="center" > A courteous car or a friendly team will take you back to your office or home while your vehicle is under service.</h3>
-		<br>
-		<h3 align="center" > Let the Tyre Town team be responsible for all your wheels, tyres (including wheel alignment) and suspension requirements.</h3>
-		<br>
-		<h3 align="center" > We are very happy to provide a service for you. </h3>
+		<h2 align="center"> Our Service Times:</h2>
+		<table align="center" border="0">
+			<th colspan="15"></th>
+			<tr><td> Monday</td> <td>8am - 5pm</td></tr>
+			<tr><td>Tuesday</td> <td>8am - 5pm</td></tr>
+			<tr><td>Wednesday</td> <td>8am - 5pm</td></tr>
+			<tr><td>Thursday</td> <td>8am - 5pm</td></tr>
+			<tr><td> Friday</td> <td>8am - 5pm</td></tr>
+			<tr><td>Saturday</td> <td>8am - 1pm</td></tr>
+			<tr><td>Sunday</td> <td>8am - 1pm (only for millie)</td></tr>
+		</table>
     </div>
 
 

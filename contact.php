@@ -78,15 +78,20 @@
  </nav>
 
     <div class="card">
-		<h1 align="center">Welcome to Tyre Town </h1>
-		<h3 align="center" > Tyretown has served Christchurch for more than 50 years.</h3>
-		    <h3 align="center" > This family-owned company specializes in providing quality products and services to its customers.</h3>
+	<h2 align="center">Contact Details:</h2>
+		<table align="center" border="0">
+			<th colspan="15"></th>
+			<tr><td>Address</td> <td>50 Ilam Road
 		<br>
-		<h3 align="center" > A courteous car or a friendly team will take you back to your office or home while your vehicle is under service.</h3>
+		Ilam
 		<br>
-		<h3 align="center" > Let the Tyre Town team be responsible for all your wheels, tyres (including wheel alignment) and suspension requirements.</h3>
-		<br>
-		<h3 align="center" > We are very happy to provide a service for you. </h3>
+		Christchurch 8038</td></tr>
+			<tr><td>Phone</td> <td>03-3345872
+			<br>
+			022-090-8793
+			</td></tr>
+			<tr><td>Email</td> <td>tyretown@localhost.co.nz</td></tr>
+		</table>
     </div>
 
 

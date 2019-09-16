@@ -9,15 +9,6 @@ body {
     padding-top: 54px;
 }
 
-header{
-    text-align: center;
-    font-weight: bold;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-size: larger;
-    text-decoration: underline darkgrey;
-    background-color: #eee;
-}
 
 /* Responsive table */
 
@@ -247,15 +238,26 @@ table tr {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
-input[type="text"],
-.search{
-    border-radius: 18px;
-    padding: 2px;
+
+input[type="text"], .search {
     padding-left: 10px;
+    padding-left: 10px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .button{
     border-radius: 19px;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.card {
+    max-width: 40%;
+    margin: 0 auto; 
+    margin-bottom: 10px;
+    margin-top: 100px;
+    padding: 20px;
 }
