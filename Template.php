@@ -77,19 +77,6 @@
 
  </nav>
 
-    <div class="card">
-        <b>Our address is: </b>
-		50 Ilam Road
-		<br>
-		Ilam Christchurch 8038
-		<br>
-		<b>Phone:</b>  03-3345872, 022 090 8793
-		<br>
-		<b>Email:</b>  tyretown@xtra.co.nz
-    </div>
-
-
-
                 <div class="footer fixed-bottom">TyreTown 2019, Dev Group 16</div>
  </body>
 </html>
