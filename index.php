@@ -77,7 +77,7 @@
 
  </nav>
 
-    <div class="card">
+    <div class="card welcome">
 		<h1 align="center">Welcome to Tyre Town </h1>
 		<h3 align="center" > Tyretown has served Christchurch for more than 50 years.</h3>
 		    <h3 align="center" > This family-owned company specializes in providing quality products and services to its customers.</h3>
