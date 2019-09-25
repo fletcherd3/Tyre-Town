@@ -14,7 +14,7 @@
 
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" type="text/css" href="css/main.css">
 
      <script type="text/javascript" src="./scripts/scripts.js"></script>
 
@@ -76,7 +76,7 @@
 
 
  </nav>
-
+<!--
     <div class="card welcome">
 		<h1 align="center">Welcome to Tyre Town </h1>
 		<h3 align="center" > Tyretown has served Christchurch for more than 50 years.</h3>
@@ -88,7 +88,21 @@
 		<br>
 		<h3 align="center" > We are very happy to provide a service for you. </h3>
     </div>
+-->
+<header class="jumbotron header container-fluid text-warning" > </header>
+ <div class="description">
+     <h1>Welcome to Tyre Town!</h1>
+     <p>Tyre Town has served Christchurch for more than 50 years. This family-owned company specializes in providing quality products and services to its customers.
+         A courteous car or a friendly team will take you back to your office or home while your vehicle is under service.
+         Let the Tyre Town team be responsible for all your wheels, tyres (including wheel alignment) and suspension requirements.
+         We are very happy to provide service for you.
+     </p>
+ </div>
 
+ <script src="js/main.js"  > </script>
+
+	 
+	 
 
 
                 <div class="footer fixed-bottom">TyreTown 2019, Dev Group 16</div>
