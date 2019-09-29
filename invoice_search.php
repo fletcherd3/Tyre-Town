@@ -34,9 +34,6 @@
          error_handller();
      </script>
 
-     <style type="text/css">
-         h3 {color: blue;}
-     </style>
 	 
 	 <!-- Get Target values from database and store values in an array -->
 	 <?php
