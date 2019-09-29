@@ -3,5 +3,5 @@
     $port = "3306";
     $username = "fdi19";
     $password = "Qmva749_";
-    $dbName = "INFO263_19S2_wheel_alignment";
+    $dbName = "info263_19s2_wheel_alignment";
 ?>

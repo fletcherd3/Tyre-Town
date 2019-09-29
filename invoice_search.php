@@ -8,7 +8,7 @@
      <meta name="description" content="">
      <meta name="author" content="">
      <title>Tyre Town</title>
-	 <link rel="assets/shortcut icon" href="favicon.ico" type="image/x-icon">
+	 <link rel="IMG/shortcut icon" href="IMG/favicon.ico" type="image/x-icon">
 
      <!-- Bootstrap core CSS -->
 
@@ -16,7 +16,7 @@
            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
      <link rel="stylesheet" href="css/style.css">
 
-     <script type="text/javascript" src="./scripts/scripts.js"></script>
+     <script type="text/javascript" src="./js/scripts.js"></script>
 
      <!-- This is the javascript needed for some bootstrap components -->
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -34,6 +34,7 @@
          error_handller();
      </script>
 
+	 
 	 <!-- Get Target values from database and store values in an array -->
 	 <?php
 	 require_once('./request/request_targets.php');
@@ -44,10 +45,10 @@
 
  
  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top justify-content">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top justify-content">
 
          <a class="navbar-brand" href="./index.php">
-		 <img src="assets/logo.png" width="37" height="30" class="d-inline-block align-top" alt="">
+		 <img src="IMG/logo.png" width="37" height="30" class="d-inline-block align-top" alt="">
 		 Tyre Town
 		 </a>
 

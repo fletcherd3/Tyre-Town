@@ -23,7 +23,7 @@ front_axle_max_steering_lock_left_steer_left_target AS '17',
 front_axle_max_steering_lock_left_steer_right_target AS '18',
 front_axle_max_steering_lock_right_steer_left_target AS '19',
 front_axle_max_steering_lock_right_steer_right_target AS '20'
-FROM info263_19s2_wheel_alignment.targetvalue 
+FROM info263_19s2_wheel_alignment.targetValue 
 ";
 
 $query = mysqli_query($conn, $query2) or die(mysqli_error($conn));
