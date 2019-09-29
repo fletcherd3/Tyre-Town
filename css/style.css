@@ -47,6 +47,7 @@ table tr {
     font-weight: bold;
 }
 
+h3 {color: blue;}
 
 @media screen and (min-width: 996px){
 
