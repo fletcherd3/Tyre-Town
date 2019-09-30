@@ -24,7 +24,7 @@ body {
 }
 
 .header {
-  background-image: url('Tyre.jpg');
+  background-image: url('../IMG/Tyre.jpg');
   background-size: cover;
   background-position: center;
   position: relative;

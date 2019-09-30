@@ -101,7 +101,7 @@
      </p>
  </div>
 
- <script src="js/main.js"  > </script>
+ <script src="js/scripts.js"  > </script>
 
 	 
 	 
