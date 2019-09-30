@@ -95,10 +95,18 @@
 
 
          <form method="post" action="invoice_search.php">
-                <div class="float-mid search"><input type="text" name="input" size="25" id="receiptID"
-                                              placeholder="Enter Invoice Number" required pattern="\S+"/>
-                    <input class="button" type="submit" name="submitButton" value="Submit" ></div></form>
+                <div class="float-mid search">
+                    <select required name="input" id="receiptID" >
+                        <option value="">Select Invoice Number</option>
+                        <option value="B742632">B742632</option>
+                        <option value="D884721">D884721</option>
+                        <option value="R005374">R005374</option>
+                    </select>
+                  <!--  <input type="text" name="input" size="25" id="receiptID" placeholder="Enter Invoice Number" required pattern="\S+"/>  -->
 
+
+                    <input class="button" type="submit" name="submitButton" value="Submit" >
+                </div></form>
         <br>
 
 
