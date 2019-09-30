@@ -14,7 +14,7 @@
 
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/main.css">
 
      <script type="text/javascript" src="./js/scripts.js"></script>
 
@@ -88,11 +88,11 @@
    <!-- Page content -->
     <div class="container">
 
-            <div class="col-lg-12 ">
-                <h2 class="mt-5 text-center">Tyre Town Invoice Search</h2>
-            </div>
 
-
+    <div class="card">
+        <div class="col-lg-12 ">
+            <h2 class="mt-5 text-center">Tyre Town Invoice Search</h2>
+        </div>
 
          <form method="post" action="invoice_search.php">
                 <div class="float-mid search">
@@ -117,8 +117,7 @@
                     <input class="button" type="submit" name="submitButton" value="Submit" >
                 </div></form>
         <br>
-
-
+    </div>
 
         <?php
         require_once('./request/search_request2.php');
@@ -598,8 +597,6 @@
 
         <?php } ?>
 
-                <br>
-                <br>
 
                 <div class="footer fixed-bottom">TyreTown 2019, Dev Group 16</div>
 

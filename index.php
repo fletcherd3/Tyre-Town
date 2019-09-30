@@ -91,7 +91,7 @@
 		<h3 align="center" > We are very happy to provide a service for you. </h3>
     </div>
 -->
-<header class="jumbotron header container-fluid text-warning" > </header>
+
  <div class="description">
      <h1>Welcome to Tyre Town!</h1>
      <p>Tyre Town has served Christchurch for more than 50 years. This family-owned company specializes in providing quality products and services to its customers.
