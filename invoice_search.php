@@ -45,7 +45,7 @@
 
  
  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top justify-content">
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top justify-content">
 
          <a class="navbar-brand" href="./index.php">
 		 <img src="IMG/logo.png" width="37" height="30" class="d-inline-block align-top" alt="">
