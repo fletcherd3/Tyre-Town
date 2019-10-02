@@ -235,8 +235,8 @@ table tr {
     }
 }
 
-.collapsible #Tutorial  {
-    background-color: #181818;
+.collapsible  {
+    background-color: #eee;
     color: blue;
     cursor: pointer;
     padding: 18px;
