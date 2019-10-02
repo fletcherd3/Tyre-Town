@@ -40,7 +40,7 @@
  
  <!-- Navigation -->
 <!--
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top justify-content">
+ <nav class="navbar navbar-expand-lg fixed-top justify-content">
 -->
  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top justify-content">
          <a class="navbar-brand" href="./index.php">
