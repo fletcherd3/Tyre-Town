@@ -1,8 +1,8 @@
 body {
-  padding: 0;
-  margin: 0;
-  background: #f2f6e9;
-  padding-top: 54px;
+    padding: 0;
+    margin: 0;
+    background: #f2f6e9;
+    padding-top: 54px;
     background-image: url('../IMG/Tyre 2.jpg');
     background-size: cover;
     background-position: center;
@@ -10,41 +10,46 @@ body {
 }
 /*--- navigation bar ---*/
 .navbar {
-  background:#6ab446;
+    background:#6ab446;
 }
-.nav-link,
-.navbar-brand {
-  color: #fff;
-  cursor: pointer;
+
+.navbar-dark .nav-item .nav-link,
+.navbar-dark .navbar-brand {
+    color: #fff;
+    cursor: pointer;
 }
 .nav-link {
-  margin-right: 1em !important;
-}
-.nav-link:hover {
-  color: #000;
-}
-.navbar-collapse {
-  justify-content: flex-end;
+    margin-right: 1em !important;
 }
 
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-dark .nav-item.active .nav-link,
+.navbar-dark .nav-item:focus .nav-link,
+.navbar-dark .nav-item:hover .nav-link,
+.navbar-dark .navbar-brand:hover {
+    color: #000000 !important;
+}
 
 .description {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -55%);
-  text-align: center;
-  background-color:white;
-  border-radius: 25px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    text-align: center;
+    background-color:white;
+    border-radius: 25px;
 }
 
 .description h1 {
-  color: blue;
+    color: blue;
 }
 .description p {
-  color: orange;
-  font-size: 1.3rem;
-  line-height: 1.5;
+    color: orange;
+    font-size: 1.3rem;
+    line-height: 1.5;
 }
 
 /* From Style.css */
@@ -71,23 +76,23 @@ table {
     width: 100%;
 }
 
-    table td {
-        border-bottom: 2px solid darkgrey;
-        padding-top: 10px;
-        padding: 10px;
-        text-align: center;
-    }
+table td {
+    border-bottom: 2px solid darkgrey;
+    padding-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
 
-    table th {
-        border-bottom: 2px solid darkgrey;
-        text-align: center;
-        text-transform: uppercase;
-        padding: 10px;
-    }
+table th {
+    border-bottom: 2px solid darkgrey;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
 
-    table tr {
-        padding: 10px;
-    }
+table tr {
+    padding: 10px;
+}
 
 .table-header {
     font-size: larger;
@@ -184,26 +189,26 @@ table {
         padding-bottom: 10px;
     }
 
-        table td:first-child {
-            border-right: none;
-            border-top: None;
-        }
+    table td:first-child {
+        border-right: none;
+        border-top: None;
+    }
 
-        table td:before {
-            border-right: none;
-            display: block;
-            content: attr(data-label);
-            font-weight: bold;
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            padding-right: 5px;
-            padding-bottom: 10px;
-        }
+    table td:before {
+        border-right: none;
+        display: block;
+        content: attr(data-label);
+        font-weight: bold;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+    }
 
-        table td:after {
-            padding-bottom: 10px;
-        }
+    table td:after {
+        padding-bottom: 10px;
+    }
 
     .formheader {
         padding-top: 56px;
@@ -230,7 +235,7 @@ table {
     }
 }
 
-.collapsible {
+.collapsible #Tutorial  {
     background-color: #181818;
     color: blue;
     cursor: pointer;
@@ -243,9 +248,9 @@ table {
     border-radius: 20px;
 }
 
-    .active, .collapsible:hover {
-        background-color: black;
-    }
+.active, .collapsible:hover {
+    background-color: yellow;
+}
 
 /* Style the collapsible content.*/
 .content {
