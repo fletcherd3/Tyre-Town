@@ -293,10 +293,10 @@
 
     <button class="collapsible"><h3>Alignment Information</h3></button>
     <div class="content">
-        <header>Back Axle</header>
-        <div class="col-lg-12">
+        <h2>Back Axle</h2>
+        <div class="col-lg-13">
             <div class="accordion" id="accordionExample">
-                <div class="card">
+                <div class="card col">
                     <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -344,7 +344,7 @@
                 </div>
 
 
-                <div class="card">
+                <div class="card col">
                     <div class="card-header" id="headingTwo">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -390,7 +390,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card col">
                     <div class="card-header" id="headingThree">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -398,7 +398,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <table class="alignment">
                                 <thead>
@@ -422,7 +422,7 @@
                 </div>
 
                 <header>Front Axle</header>
-                <div class="card">
+                <div class="card col">
                     <div class="card-header" id="headingFour">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -430,7 +430,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
                             <table class="alignment">
                                 <thead>
@@ -468,7 +468,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card col">
                     <div class="card-header" id="headingFive">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -476,7 +476,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div id="collapseFive" class="collapse show" aria-labelledby="headingFive" data-parent="#accordionExample">
                         <div class="card-body">
                             <table class="alignment">
                                 <thead>
@@ -514,7 +514,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card col">
                     <div class="card-header" id="headingSix">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -560,7 +560,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card col">
                     <div class="card-header" id="headingSeven">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
@@ -568,7 +568,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                    <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <table class="alignment">
                                 <thead>
@@ -599,7 +599,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card col">
                     <div class="card-header" id="headingEight">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
@@ -607,7 +607,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                    <div id="collapseEight" class="collapse show" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <table class="alignment">
                                 <thead>
@@ -645,7 +645,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card col">
                     <div class="card-header" id="headingNine">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
@@ -653,7 +653,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+                    <div id="collapseNine" class="collapse show" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <table class="alignment">
                                 <thead>
@@ -676,7 +676,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card col">
                     <div class="card-header" id="headingTen">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
@@ -684,7 +684,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+                    <div id="collapseTen" class="collapse show" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <table class="alignment">
                                 <thead>
