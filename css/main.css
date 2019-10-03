@@ -305,3 +305,8 @@ table tr {
 .welcome {
     max-width: 60%;
 }
+
+.col {
+    width: 100%;
+    margin: 0px;
+}
