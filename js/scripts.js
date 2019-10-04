@@ -35,3 +35,19 @@ function make_collapsible() {
 $(document).ready(function () {
     $('.header').height($(window).height());
 })
+
+function ChangeFontSize(ids, inc) {
+
+    var i;
+    for (i = 0; i < ids.length; i++) {
+        var fontSize = parseInt($("." + ids[i]).css("font-size"));
+        if (inc == "+") {
+            fontSize = fontSize + 1 + "px";
+        } else {
+            fontSize = fontSize + -1 + "px";
+        }
+        $("." + ids[i]).css({ 'font-size': fontSize });
+    } 
+
+ 
+}

@@ -39,47 +39,53 @@
 
  
  <!-- Navigation -->
- <nav class="navbar navbar-dark navbar-expand-lg fixed-top justify-content">
-
-         <a class="navbar-brand" href="./index.php">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top justify-content">
+         <a class="navbar-brand logo_text" href="./index.php">
 		 <img src="IMG/logo.png" width="37" height="30" class="d-inline-block align-top" alt="">
-		 Tyre Town
+             Tyre Town
 		 </a>
 
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-         </button>
+         
+	<div  class="navbar-brand text change_text">
 
-     <div class="collapse navbar-collapse" id="navbarResponsive">
-         <ul class=" navbar-nav ml-auto justify-content-end " id='test'>
-             <li class="nav-item">
-                 <a class="nav-link" href="./index.php">Home</a>
-             </li>
+	|   Change Text Size:
+	</div>
+    <input type="button" class="btn btn-primary btn-md text_size" value="-" onclick="ChangeFontSize(['nav_text', 'title', 'text', 'text1', 'text2', 'change_text', 'logo_text'], '-')">
+
+	<input type="button" class="btn btn-primary btn-md text_size" value="+" onclick="ChangeFontSize(['nav_text', 'title', 'text', 'text1', 'text2', 'change_text', 'logo_text'], '+')">
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class=" navbar-nav ml-auto justify-content-end nav_text" >
+            <li class="nav-item">
+                <a class="nav-link" href="./index.php">Home</a>
+            </li>
 			 
-			 <li class="nav-item">
-                 <a class="nav-link" href="./invoice_search.php">Invoice Search</a>
-             </li>
+			<li class="nav-item">
+                <a class="nav-link" href="./invoice_search.php">Invoice Search</a>
+            </li>
 
-			 <li class="nav-item">
-                 <a class="nav-link" href="./services.php">Our Services</a>
-             </li>
+			<li class="nav-item">
+                <a class="nav-link" href="./services.php">Our Services</a>
+            </li>
 
-			 <li class="nav-item">
-                 <a class="nav-link" href="./open_hours.php">Open Hours</a>
-             </li>
+			<li class="nav-item">
+                <a class="nav-link" href="./open_hours.php">Open Hours</a>
+            </li>
 
-             <li class="nav-item">
-                 <a class="nav-link" href="./contact.php">Contact Us</a>
-             </li>
-         </ul>
-     </div>
-
-
+            <li class="nav-item">
+                <a class="nav-link" href="./contact.php">Contact Us</a>
+            </li>
+        </ul>
+    </div>
  </nav>
 
     <div class="card">
-		<h2 align="center"> Our Service Times:</h2>
-		<table align="center" border="0">
+		<h2 class="text1" align="center"> Our Service Times:</h2>
+		<table class="text2" align="center" border="0">
 			<th colspan="15"></th>
 			<tr><td> Monday</td> <td>8am - 5pm</td></tr>
 			<tr><td>Tuesday</td> <td>8am - 5pm</td></tr>
@@ -87,7 +93,7 @@
 			<tr><td>Thursday</td> <td>8am - 5pm</td></tr>
 			<tr><td> Friday</td> <td>8am - 5pm</td></tr>
 			<tr><td>Saturday</td> <td>8am - 1pm</td></tr>
-			<tr><td>Sunday</td> <td>8am - 1pm (only for millie)</td></tr>
+			<tr><td>Sunday</td> <td>Closed</td></tr>
 		</table>
     </div>
 

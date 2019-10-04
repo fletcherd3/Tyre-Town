@@ -47,17 +47,26 @@
 <!-- Navigation -->
 <nav class="navbar navbar-dark navbar-expand-lg fixed-top justify-content">
 
-    <a class="navbar-brand" href="./index.php">
+    <a class="navbar-brand logo_text" href="./index.php">
         <img src="IMG/logo.png" width="37" height="30" class="d-inline-block align-top" alt="">
         Tyre Town
     </a>
+
+	<div class="navbar-brand text change_text">
+
+		|   Change Text Size:
+	</div>
+
+	<input type="button" class="btn btn-primary btn-md text_size" value="-" onclick="ChangeFontSize(['text', 'text1','text3', 'text4', 'logo_text'], '-')">
+
+	<input type="button" class="btn btn-primary btn-md text_size" value="+" onclick="ChangeFontSize(['text', 'text1','text3', 'text4', 'logo_text'], '+')">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class=" navbar-nav ml-auto justify-content-end " id='test'>
+        <ul class=" navbar-nav ml-auto justify-content-end text1">
             <li class="nav-item">
                 <a class="nav-link" href="./index.php">Home</a>
             </li>
@@ -91,7 +100,7 @@
 
     <div class="card">
         <div class="col-lg-12 ">
-            <h2 class="mt-5 text-center">Tyre Town Invoice Search</h2>
+            <h2 class="mt-5 text-center text3">Tyre Town Invoice Search</h2>
         </div>
 
         <form method="post" action="invoice_search.php">
@@ -126,7 +135,7 @@
     if (!empty($_POST['input'])){
         if($row = mysqli_fetch_array($query))
             ?>
-            <button class="collapsible"><h3>Customer Information</h3></button>
+            <button class="collapsible"><h3 class='text4'>Customer Information</h3></button>
 
             <div class="content">
             <div class="col-lg-12">
@@ -174,7 +183,7 @@
 
 
 
-        <button class="collapsible"><h3>Invoice</h3></button>
+        <button class="collapsible"><h3 class='text4'>Invoice</h3></button>
         <div class="content">
         <div class="col-lg-12">
         <table>
@@ -221,7 +230,7 @@
 
             <br>
 
-            <button class="collapsible"><h3>Garage Information</h3></button>
+            <button class="collapsible"><h3 class='text4'>Garage Information</h3></button>
             <div class="content">
             <div class="col-lg-12">
             <table>
@@ -291,7 +300,7 @@
 
     <br>
 
-    <button class="collapsible"><h3>Alignment Information</h3></button>
+    <button class="collapsible"><h3 class='text4'>Alignment Information</h3></button>
     <div class="content">
         <h2>Back Axle</h2>
         <div class="col-lg-13">
@@ -421,7 +430,7 @@
                     </div>
                 </div>
 
-                <header>Front Axle</header>
+                <h2>Front Axle</h2>
                 <div class="card col">
                     <div class="card-header" id="headingFour">
                         <h2 class="mb-0">
@@ -563,11 +572,12 @@
                 <div class="card col">
                     <div class="card-header" id="headingSeven">
                         <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
                                 TRACK DIFFERENTIAL ANGLE
                             </button>
                         </h2>
                     </div>
+
                     <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <table class="alignment">

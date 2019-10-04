@@ -43,17 +43,26 @@
  <nav class="navbar navbar-expand-lg fixed-top justify-content">
 -->
  <nav class="navbar navbar-expand-lg navbar-dark fixed-top justify-content">
-         <a class="navbar-brand" href="./index.php">
+         <a class="navbar-brand logo_text" href="./index.php">
 		 <img src="IMG/logo.png" width="37" height="30" class="d-inline-block align-top" alt="">
-		 Tyre Town
+             Tyre Town
 		 </a>
 
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         
+		<div  class="navbar-brand text change_text">
+
+		|   Change Text Size:
+		</div>
+     <input type="button" class="btn btn-primary btn-md text_size" value="-" onclick="ChangeFontSize(['nav_text', 'title', 'text', 'change_text', 'logo_text'], '-')">
+
+	 <input type="button" class="btn btn-primary btn-md text_size" value="+" onclick="ChangeFontSize(['nav_text', 'title', 'text', 'change_text', 'logo_text'], '+')">
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
-         </button>
+     </button>
 
      <div class="collapse navbar-collapse" id="navbarResponsive">
-         <ul class=" navbar-nav ml-auto justify-content-end " id='test'>
+         <ul class=" navbar-nav ml-auto justify-content-end nav_text" >
              <li class="nav-item">
                  <a class="nav-link" href="./index.php">Home</a>
              </li>
@@ -93,8 +102,8 @@
 -->
 
  <div class="description">
-     <h1>Welcome to Tyre Town!</h1>
-     <p>Tyre Town has served Christchurch for more than 50 years. This family-owned company specializes in providing quality products and services to its customers.
+     <h1 class='title'>Welcome to Tyre Town!</h1>
+     <p class='text'>Tyre Town has served Christchurch for more than 50 years. This family-owned company specializes in providing quality products and services to its customers.
          A courteous car or a friendly team will take you back to your office or home while your vehicle is under service.
          Let the Tyre Town team be responsible for all your wheels, tyres (including wheel alignment) and suspension requirements.
          We are very happy to provide service for you.

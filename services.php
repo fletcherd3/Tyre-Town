@@ -39,19 +39,27 @@
 
  
  <!-- Navigation -->
- <nav class="navbar navbar-dark navbar-expand-lg fixed-top justify-content">
-
-         <a class="navbar-brand" href="./index.php">
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top justify-content">
+         <a class="navbar-brand logo_text" href="./index.php">
 		 <img src="IMG/logo.png" width="37" height="30" class="d-inline-block align-top" alt="">
-		 Tyre Town
+             Tyre Town
 		 </a>
 
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         
+		<div  class="navbar-brand text change_text">
+
+		|   Change Text Size:
+		</div>
+     <input type="button" class="btn btn-primary btn-md text_size" value="-" onclick="ChangeFontSize(['nav_text', 'title', 'text', 'text1', 'text2', 'change_text', 'logo_text'], '-')">
+
+	 <input type="button" class="btn btn-primary btn-md text_size" value="+" onclick="ChangeFontSize(['nav_text', 'title', 'text', 'text1', 'text2', 'change_text', 'logo_text'], '+')">
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
-         </button>
+     </button>
 
      <div class="collapse navbar-collapse" id="navbarResponsive">
-         <ul class=" navbar-nav ml-auto justify-content-end " id='test'>
+         <ul class=" navbar-nav ml-auto justify-content-end nav_text" >
              <li class="nav-item">
                  <a class="nav-link" href="./index.php">Home</a>
              </li>
@@ -78,8 +86,8 @@
  </nav>
 
     <div class="card">
-		<h2 align="center">Our services include: </h2>
-		<table align="center">
+		<h2 class='text1' align="center">Our services include: </h2>
+		<table class='text2' align="center">
 			<tr> <th colsapn="20"></th></tr>
 			<tr> <td>Tyre Maintenance</td></tr>
 			<tr> <td>Wheel Balance</td></tr>
