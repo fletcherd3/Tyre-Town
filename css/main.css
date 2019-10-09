@@ -111,6 +111,8 @@ table tr {
 
 @media screen and (min-width: 996px) {
 
+    
+
     .table-no-underline {
         border-bottom: None;
     }
@@ -163,6 +165,23 @@ table tr {
 /* CSS response to small screen */
 
 @media screen and (max-width: 995px) {
+
+    #receiptID {
+        width: 100%;
+    }
+
+    .description {
+        margin-top: 40px;
+        width: 90%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -55%);
+        text-align: center;
+        background-color: lightyellow;
+        border-radius: 25px;
+        border: 2px solid green;
+    }
 
     .bottomTD {
         border-bottom: none;
@@ -329,3 +348,6 @@ table tr {
 }
 
 
+.container {
+    margin-bottom: 50px;
+}
