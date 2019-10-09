@@ -39,17 +39,19 @@ body {
     top: 50%;
     transform: translate(-50%, -55%);
     text-align: center;
-    background-color:white;
+    background-color:lightyellow;
     border-radius: 25px;
+    border: 2px solid green;
 }
 
 .description h1 {
     color: blue;
 }
 .description p {
-    color: orange;
+    color: purple;
     font-size: 1.3rem;
     line-height: 1.5;
+
 }
 
 /* From Style.css */
@@ -301,8 +303,11 @@ table tr {
     margin-bottom: 10px;
     margin-top: 100px;
     padding: 20px;
-    background-color:white;
+    background-color:lightyellow;
+    border: 2px solid green;
 }
+
+.card h2 {color: blue;}
 
 .welcome {
     max-width: 60%;
@@ -322,3 +327,5 @@ table tr {
     color: white;
     font-size: 1em;
 }
+
+
