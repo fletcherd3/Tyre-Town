@@ -53,6 +53,7 @@
 
 		|   Change Text Size:
 		</div>
+		<!-- Adding buttons to change font size -->
      <input type="button" class="btn btn-primary btn-md text_size" value="-" onclick="ChangeFontSize(['nav_text', 'title', 'text', 'change_text', 'logo_text'], '-')">
 
 	 <input type="button" class="btn btn-primary btn-md text_size" value="+" onclick="ChangeFontSize(['nav_text', 'title', 'text', 'change_text', 'logo_text'], '+')">
@@ -61,6 +62,7 @@
              <span class="navbar-toggler-icon"></span>
      </button>
 
+	 <!-- Collapsable code -->
      <div class="collapse navbar-collapse" id="navbarResponsive">
          <ul class=" navbar-nav ml-auto justify-content-end nav_text" >
              <li class="nav-item">
@@ -88,7 +90,7 @@
 
  </nav>
 
-
+ <!-- Description code -->
  <div class="description">
      <h1 class='title'>Welcome to Tyre Town!</h1>
      <p class='text'>Tyre Town has served Christchurch for more than 50 years. This family-owned company specializes in providing quality products and services to its customers.

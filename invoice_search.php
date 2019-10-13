@@ -29,7 +29,7 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
 
-    <!-- error handling function -->
+    <!-- error handling function in js folder-->
     <script>
         error_handller();
     </script>
@@ -57,6 +57,7 @@
 		|   Change Text Size:
 	</div>
 
+	<!-- Adding buttons to change font size -->
 	<input type="button" class="btn btn-primary btn-md text_size" value="-" onclick="ChangeFontSize(['text', 'text1','text3', 'text4', 'logo_text'], '-')">
 
 	<input type="button" class="btn btn-primary btn-md text_size" value="+" onclick="ChangeFontSize(['text', 'text1','text3', 'text4', 'logo_text'], '+')">
@@ -65,6 +66,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
+	<!-- Collapsable code -->
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class=" navbar-nav ml-auto justify-content-end text1">
             <li class="nav-item">
@@ -108,6 +110,7 @@
                 <select required name="input" id="receiptID" >
 
                     <option value="">Select Invoice Number</option>
+					<!-- Gather invoices from database and display results in dropdown box -->
                     <?php
                     require_once('./request/request_invoices.php');
 
@@ -130,7 +133,6 @@
 
     <?php
     require_once('./request/search_request2.php');
-    // echo($_POST['input']); Testing user input to make sure is a valid option
 
     if (!empty($_POST['input'])){
         if($row = mysqli_fetch_array($query))
@@ -168,8 +170,7 @@
         </table>
         </div>
         </div>
-    <?php } ?> <!-- F.D - Is this good practise? -->
-
+    <?php } ?> 
 
 
     <?php
@@ -180,9 +181,6 @@
         ?>
 
         <br>
-
-
-
         <button class="collapsible"><h3 class='text4'>Invoice</h3></button>
         <div class="content">
         <div class="col-lg-12">
@@ -224,12 +222,12 @@
 
     <?php
     require_once('./request/search_request3.php');
+
     if (!empty($_POST['input'])){
         if($row = mysqli_fetch_array($query))
             ?>
 
             <br>
-
             <button class="collapsible"><h3 class='text4'>Garage Information</h3></button>
             <div class="content">
             <div class="col-lg-12">
@@ -257,7 +255,6 @@
         </table>
         </div>
         </div>
-
     <?php } ?>
 
     <?php
@@ -292,6 +289,7 @@
     }
     ?>
 
+	<!-- Show alignment info results -->
     <?php
     require_once('./request/search_request4.php');
     if (!empty($_POST['input'])){
@@ -728,7 +726,7 @@
                                     <td data-label="Actual"><?php echo check_target($row['50'], $targets['20']);?></td>
                                 </tr>
 
-                                <!-- Seems to be a mistake in the given database with the last two values in the 'targetvalue'
+                                <!-- Seems to be a mistake in the given database with the last two values in the 'targetValue'
                                      database where the last two values don't match the given values and are the wrong way around,
                                      for now i'll swith them around the other way so they'll work properly.
                                  -->
